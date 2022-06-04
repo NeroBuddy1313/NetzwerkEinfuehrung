@@ -22,10 +22,11 @@ public final class MeinClient {
     }
 
     public static void main(final String[] args) {
-        MeinClient client = new MeinClient("localhost", 3000);
-        client.sendMessage(SCANNER.next());
-        client.sendMessage("Hi");
-        client.sendMessage("Tschüss");
+        MeinClient client = new MeinClient("127.0.0.1", 3000);
+        while (true) {
+            System.out.print("[Client] Eingabe: ");
+            client.sendMessage(SCANNER.next());
+        }
     }
 
     public void sendMessage(final String msg) {
